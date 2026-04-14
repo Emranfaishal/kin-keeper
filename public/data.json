@@ -12,7 +12,9 @@
         ],
         "bio": "Met during computer science studies at university. Used to work on coding projects and attend hackathons together.",
         "goal": 14,
-        "next_due_date": "2026-03-28"
+        "next_due_date": "2026-03-28",
+        "gender":"FAMALE MALE"
+        
     },
     {
         "id": 2,
@@ -27,7 +29,8 @@
         ],
         "bio": "Worked together at first job. Often shared lunch breaks and career advice discussions.",
         "goal": 14,
-        "next_due_date": "2026-04-17"
+        "next_due_date": "2026-04-17",
+        "gender":"MALE"
     },
     {
         "id": 3,
@@ -42,7 +45,8 @@
         ],
         "bio": "Childhood friend from school. Played football together every weekend in the neighborhood math.",
         "goal": 14,
-        "next_due_date": "2026-04-22"
+        "next_due_date": "2026-04-22",
+        "gender":"FAMILY"
     },
     {
         "id": 4,
@@ -57,7 +61,8 @@
         ],
         "bio": "Gym partner who motivated me to stay consistent with workouts and healthy eating habits.",
         "goal": 14,
-        "next_due_date": "2026-03-25"
+        "next_due_date": "2026-03-25",
+        "gender":"FAMILY"
     },
     {
         "id": 5,
@@ -72,7 +77,8 @@
         ],
         "bio": "Studied together for exams and helped each other with difficult subjects like algorithms.",
         "goal": 14,
-        "next_due_date": "2026-04-15"
+        "next_due_date": "2026-04-15",
+        "gender":"MAIL"
     },
     {
         "id": 6,
@@ -87,7 +93,8 @@
         ],
         "bio": "Neighbor since childhood. Grew up playing cricket in the same street.",
         "goal": 14,
-        "next_due_date": "2026-04-24"
+        "next_due_date": "2026-04-24",
+        "gender":"FAMILY"
     },
     {
         "id": 7,
@@ -102,7 +109,8 @@
         ],
         "bio": "Met through an online design community. Shared ideas and collaborated on UI/UX projects.",
         "goal": 14,
-        "next_due_date": "2026-04-01"
+        "next_due_date": "2026-04-01",
+        "gender":"MAIL"
     },
     {
         "id": 8,
@@ -117,7 +125,8 @@
         ],
         "bio": "Travel buddy who joined me on trips to Cox’s Bazar and Bandarban. Loves exploring nature.",
         "goal": 14,
-        "next_due_date": "2026-04-16"
+        "next_due_date": "2026-04-16",
+        "gender":"FAMILY"
     },
     {
         "id": 9,
@@ -131,7 +140,8 @@
         ],
         "bio": "Family friend who regularly visits during Eid and special occasions.",
         "goal": 14,
-        "next_due_date": "2026-04-20"
+        "next_due_date": "2026-04-20",
+        "gender":"MAIL"
     },
     {
         "id": 10,
@@ -146,6 +156,7 @@
         ],
         "bio": "Mentor who guided me in starting freelance work and building professional skills.",
         "goal": 14,
-        "next_due_date": "2026-03-27"
+        "next_due_date": "2026-03-27",
+        "gender":"FAMILY"
     }
 ]

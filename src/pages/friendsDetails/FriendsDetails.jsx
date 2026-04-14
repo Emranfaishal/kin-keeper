@@ -1,17 +1,26 @@
-import React from 'react';
+// import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { BiSolidTrash } from 'react-icons/bi';
 import { FiEdit, FiPhoneCall } from 'react-icons/fi';
 import { IoIosVideocam, IoMdArchive, IoMdClock, IoMdText } from 'react-icons/io';
 import { MdHistory } from 'react-icons/md';
+import { useContext } from 'react';
+import { FriendsContext } from '../../context/FriendsContext';
 
 const FriendsDetails = () => {
     const params = useParams();
-    console.log(params);
+    // console.log(params);
     const friend = useLoaderData();
-    console.log(friend);
+    // console.log(friend);
     const expectFriend = friend.find((fri => String(fri.id) === params.id));
-    console.log(expectFriend);
+    // console.log(expectFriend);
+    // const [callDetails, setCallDetails] = useState([]);
+    // const handleCall = (expectFriends) => {
+    //     setCallDetails([...callDetails, expectFriends]);
+    // }
+
+    const { handleCall, handleText, handleVideo } = useContext(FriendsContext);
+
     return (
         <div>
             <div className='bg-base-300'>
@@ -34,10 +43,10 @@ const FriendsDetails = () => {
                                     </div>
                                 </div>
                                 <div className='flex gap-2 justify-center'>
-                                    {expectFriend.tags.map((tag, i) => <span key={i} className='badge badge-success bg-green-200 uppercase text-[10px] font-bold'>{tag}</span>)}
+                                    <span className='badge badge-success bg-green-200 uppercase text-[10px] font-bold'>{expectFriend.gender}</span>
                                 </div>
-                                <p className='text-[#64748B] text-sm'>{expectFriend.bio}</p>
-                                <p className='text-xs text-gray-400'>Preferred: {expectFriend.email}</p>
+                                <p className='text-[#64748B]  text-sm'>{expectFriend.bio}</p>
+                                <p className='text-xs text-gray-400'>Preferred : {expectFriend.email}</p>
                             </div>
 
 
@@ -82,21 +91,21 @@ const FriendsDetails = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
                                         <div
-
+                                            onClick={() => handleCall(expectFriend)}
                                             className='flex flex-col justify-center items-center py-4 btn h-full'>
                                             <FiPhoneCall className='h-5 w-5' />
                                             <button className=" btn-outline border-gray-100  text-[#244D3F]">Call</button>
                                         </div>
 
                                         <div
-
+                                            onClick={() => handleText(expectFriend)}
                                             className='flex flex-col justify-center items-center py-4 btn h-full'>
                                             <IoMdText className='h-5 w-5' />
                                             <button className="border-gray-100 text-[#244D3F]">Text</button>
                                         </div>
 
                                         <div
-
+                                            onClick={() => handleVideo(expectFriend)}
                                             className='flex flex-col justify-center items-center py-4 btn h-full'>
                                             <IoIosVideocam className='h-5 w-5' />
                                             <button className="border-gray-100 text-[#244D3F]">Video</button>
