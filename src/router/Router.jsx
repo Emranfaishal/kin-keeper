@@ -5,6 +5,7 @@ import HomePage from "../pages/homepage/HomePage";
 import TimeLine from "../pages/timeline/TimeLine";
 import Stats from "../pages/stats/Stats";
 import ErrorPage from "../pages/error/ErrorPage";
+import FriendsDetails from "../pages/friendsDetails/FriendsDetails";
 
 export const router = createBrowserRouter([
     {
@@ -12,8 +13,13 @@ export const router = createBrowserRouter([
         element: <MainLayout></MainLayout>,
         children: [
             {
-                path: '/',
-                element: <HomePage></HomePage>
+                path:'/',
+                element: <HomePage></HomePage>,
+                loader: () => fetch('/data.json')
+            },
+            {
+                path: '/:id',
+                element: <FriendsDetails></FriendsDetails>
             },
             {
                 path: '/timeline',
