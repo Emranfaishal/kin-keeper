@@ -40,9 +40,6 @@ const TimeLine = () => {
 
                             </ul>
                         </div>
-                        <div>
-                            <input type="text" placeholder="Type here" className="input" />
-                        </div>
                     </div>
 
                 </div>
