@@ -8,6 +8,8 @@ const TimeLine = () => {
 
     const [filter, setFilter] = useState('all');
 
+
+
     const hasCalls = callDetails.length > 0;
     const hasTexts = textDetails.length > 0;
     const hasVideos = videoDetails.length > 0;
@@ -25,18 +27,24 @@ const TimeLine = () => {
                     <h2 className='text-4xl mb-3 font-bold text-[#1F2937]'>Timeline</h2>
                 </div>
                 <div>
-                    <div className="dropdown dropdown-bottom">
-                        <div tabIndex={0} role="button" className="btn text-gray-500 m-1">Timeline by {filter === "all" ? "⬇️" : filter === "call" ? "call"
-                            : filter === "text" ? "text" : "video"} </div>
+                    <div className='flex justify-between items-center'>
+                        <div className="dropdown dropdown-bottom">
+                            <div tabIndex={0} role="button" className="btn text-gray-500 m-1">Timeline by {filter === "all" ? "⬇️" : filter === "call" ? "call"
+                                : filter === "text" ? "text" : "video"} </div>
 
-                        <ul tabIndex="-1" className="dropdown-content menu bg-base-100  rounded-box p-2 shadow-sm">
-                            <li onClick={() => setFilter('all')}><a>All List</a></li>
-                            <li onClick={() => setFilter('call')}><a>Call List</a></li>
-                            <li onClick={() => setFilter('text')}><a>Messages List</a></li>
-                            <li onClick={() => setFilter('video')}><a>Video List</a></li>
+                            <ul tabIndex="-1" className="dropdown-content menu bg-base-100  rounded-box p-2 shadow-sm">
+                                <li onClick={() => setFilter('all')}><a>All List</a></li>
+                                <li onClick={() => setFilter('call')}><a>Call List</a></li>
+                                <li onClick={() => setFilter('text')}><a>Messages List</a></li>
+                                <li onClick={() => setFilter('video')}><a>Video List</a></li>
 
-                        </ul>
+                            </ul>
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Type here" className="input" />
+                        </div>
                     </div>
+
                 </div>
             </div>
 
