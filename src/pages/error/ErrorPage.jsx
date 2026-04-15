@@ -3,8 +3,8 @@ import { Link } from 'react-router';
 
 const ErrorPage = () => {
     return (
-        <div>
-            <div className="min-h-screen flex items-center justify-center bg-gray-100 px-6">
+        <div className='p-20'>
+            <div className=" flex items-center justify-center py-20 bg-gray-50 rounded-3xl border-2  border-gray-200">
                 <div className="text-center">
                     <h1 className="text-8xl font-extrabold text-gray-800">404</h1>
 

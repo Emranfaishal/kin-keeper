@@ -14,19 +14,29 @@ const FriendsProvider = ({ children }) => {
             setCallDetails([...callDetails, expectedFriends]);
             toast.success("Audio Calling..");
         } else {
-            toast.error("Audio end...");
+            toast.error("Audio calling already calling...");
         }
         setIsCalling(!isCalling);
     }
 
     const handleText = (expectedFriends) => {
-        setTextDetails([...textDetails, expectedFriends]);
-        toast.success(`${expectedFriends.name} Text send`);
+        if (!isCalling) {
+            setTextDetails([...textDetails, expectedFriends]);
+            toast.success(`${expectedFriends.name} Messages send`);
+        } else {
+            toast.error("Messages already send ....");
+        }
+        setIsCalling(!isCalling);
     }
 
     const handleVideo = (expectedFriends) => {
-        setVideoDetails([...videoDetails, expectedFriends]);
-        toast.success("Video Calling..");
+        if (!isCalling) {
+            setVideoDetails([...videoDetails, expectedFriends]);
+            toast.success("Video Calling ....");
+        } else {
+            toast.error("Video already calling ....");
+        }
+        setIsCalling(!isCalling);
     }
 
     const data = {

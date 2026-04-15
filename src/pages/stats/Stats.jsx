@@ -13,8 +13,8 @@ const Stats = () => {
     ];
     const totalData = data.reduce((sum, item) => sum + item.value, 0);
     return (
-        <div className='p-10'>
-            <h1 className='text-5xl font-bold mt-10 mb-10'>Friendship Analytics</h1>
+        <div className='p-20'>
+            <h1 className='text-5xl font-bold mb-10'>Friendship Analytics</h1>
             <div className='flex flex-col items-center justify-center py-20 bg-gray-50 rounded-3xl border-2  border-gray-200'>
                 {totalData === 0 ? (
                     <div className="text-center space-y-1">
@@ -26,14 +26,14 @@ const Stats = () => {
                     </div>)
 
                     : (
-                        <div className="w-full h-130">
+                        <div className="w-100 h-100">
                             <ResponsiveContainer width="100%" height="100%">
                                 <PieChart>
                                     <Pie
                                         data={data}
-                                        cx="50%"
-                                        cy="50%"
+                                        fill="#8884d8"
                                         innerRadius="60%"
+                                        cornerRadius="50%"
                                         outerRadius="80%"
                                         paddingAngle={5}
                                         dataKey="value"
@@ -47,6 +47,8 @@ const Stats = () => {
                     )}
             </div>
         </div>
+
+
     );
 };
 

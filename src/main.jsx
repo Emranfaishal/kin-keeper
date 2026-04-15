@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
     <FriendsProvider>
       <RouterProvider router={router} />
     </FriendsProvider>
-    <ToastContainer></ToastContainer>
+    <ToastContainer position="top-center" ></ToastContainer>
   </StrictMode>,
-  
+
 )

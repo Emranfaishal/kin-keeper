@@ -181,7 +181,8 @@
         "days_since_contact": 15,
         "status": "overdue",
         "tags": [
-            "office"
+            "office",
+            "family friend"
         ],
         "bio": "Office colleague.",
         "goal": 14,
@@ -196,7 +197,8 @@
         "days_since_contact": 3,
         "status": "on-track",
         "tags": [
-            "gaming"
+            "gaming",
+            "university"
         ],
         "bio": "Online gaming friend.",
         "goal": 14,
@@ -211,7 +213,8 @@
         "days_since_contact": 12,
         "status": "almost due",
         "tags": [
-            "university"
+            "university",
+            "sports"
         ],
         "bio": "University classmate.",
         "goal": 14,
@@ -226,7 +229,8 @@
         "days_since_contact": 19,
         "status": "overdue",
         "tags": [
-            "business"
+            "business",
+            "online friend"
         ],
         "bio": "Business partner.",
         "goal": 14,
@@ -241,7 +245,8 @@
         "days_since_contact": 8,
         "status": "on-track",
         "tags": [
-            "family"
+            "family",
+            "business"
         ],
         "bio": "Relative and family member.",
         "goal": 14,
@@ -256,7 +261,8 @@
         "days_since_contact": 14,
         "status": "almost due",
         "tags": [
-            "sports"
+            "sports",
+            "football"
         ],
         "bio": "Cricket buddy.",
         "goal": 14,
@@ -271,7 +277,8 @@
         "days_since_contact": 4,
         "status": "on-track",
         "tags": [
-            "design"
+            "design",
+            "gym"
         ],
         "bio": "Creative designer friend.",
         "goal": 14,
@@ -286,7 +293,8 @@
         "days_since_contact": 17,
         "status": "overdue",
         "tags": [
-            "school"
+            "school",
+            "fitness"
         ],
         "bio": "School friend.",
         "goal": 14,
@@ -301,7 +309,8 @@
         "days_since_contact": 9,
         "status": "on-track",
         "tags": [
-            "friend"
+            "friend",
+            "family"
         ],
         "bio": "Close friend.",
         "goal": 14,

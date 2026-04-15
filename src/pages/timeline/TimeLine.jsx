@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { FriendsContext } from '../../context/FriendsContext';
 import TimelineCard from './TimelineCard';
+import { CiNoWaitingSign } from "react-icons/ci";
 
 const TimeLine = () => {
     const { callDetails, textDetails, videoDetails } = useContext(FriendsContext);
@@ -19,9 +20,9 @@ const TimeLine = () => {
 
     return (
         <div className='container mx-auto px-4 h-full py-5'>
-            <div className='flex justify-between py-8 items-center border border-gray-50 mt-5 p-5 rounded-2xl'>
+            <div className='border border-gray-50 p-5 rounded-2xl'>
                 <div>
-                    <h2 className='text-4xl font-bold text-[#1F2937]'>Timeline</h2>
+                    <h2 className='text-4xl mb-3 font-bold text-[#1F2937]'>Timeline</h2>
                 </div>
                 <div>
                     <div className="dropdown dropdown-bottom">
@@ -41,6 +42,8 @@ const TimeLine = () => {
 
             {isDataEmpty && <div>
                 <div className='flex flex-col items-center justify-center py-20 bg-gray-50 rounded-3xl border-2  border-gray-200'>
+
+                    <span className='text-7xl text-gray-500 '><CiNoWaitingSign></CiNoWaitingSign></span>
 
                     <h3 className='text-xl font-semibold text-gray-500'>No {filter === 'all' ? 'Interactions'
                         : filter === "call" ? "Call Interactions"
