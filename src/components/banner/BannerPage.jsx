@@ -1,6 +1,6 @@
 import React from 'react';
 import { HiPlusSm } from "react-icons/hi";
-import { useLoaderData } from 'react-router';
+import { Link, useLoaderData } from 'react-router';
 
 const BannerPage = () => {
     const friend = useLoaderData();
@@ -15,38 +15,39 @@ const BannerPage = () => {
                             Your personal shelf of meaningful connections. Browse, tend, and nurture the <br />
                             relationships that matter most.
                         </p>
-                        <button className="btn text-white bg-[#244D3F]"><HiPlusSm></HiPlusSm> Add a Friend</button>
+                        <Link to={'/'}>
+                            <button className="btn text-white bg-[#244D3F]"><HiPlusSm></HiPlusSm> Add a Friend</button></Link>
                     </div>
                 </div>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 mt-10 mb-10'>
 
-                <div className="card bg-base-100 w-full shadow-lg">
+                <div className="card bg-base-100 w-full shadow-lg hover-3d">
                     <div className='text-center p-5 space-y-5'>
                         <h2 className='text-4xl font-bold'>{friend.length}</h2>
                         <p className='text-2xl'>Total Friends</p>
                     </div>
                 </div>
 
-                <div className="card bg-base-100 w-full shadow-lg">
+                <div className="card bg-base-100 w-full shadow-lg hover-3d">
                     <div className='text-center p-10 space-y-5'>
                         <h2 className='text-4xl font-bold'>3</h2>
-                        <p className='text-2xl'>Total Friends</p>
+                        <p className='text-2xl'>On Track</p>
                     </div>
                 </div>
 
-                <div className="card bg-base-100 w-full shadow-lg">
+                <div className="card bg-base-100 w-full shadow-lg hover-3d">
                     <div className='text-center p-5 space-y-5'>
-                        <h2 className='text-4xl font-bold'>13</h2>
-                        <p className='text-2xl'>Total Friends</p>
+                        <h2 className='text-4xl font-bold'>6</h2>
+                        <p className='text-2xl'>Need Attention</p>
                     </div>
                 </div>
 
-                <div className="card bg-base-100 w-full shadow-lg">
+                <div className="card bg-base-100 w-full shadow-lg hover-3d">
                     <div className='text-center p-5 space-y-5'>
-                        <h2 className='text-4xl font-bold'>10</h2>
-                        <p className='text-2xl'>Total Friends</p>
+                        <h2 className='text-4xl font-bold'>12</h2>
+                        <p className='text-2xl'>Interactions This Month</p>
                     </div>
                 </div>
 

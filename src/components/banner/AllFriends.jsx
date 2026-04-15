@@ -21,17 +21,15 @@ const AllFriends = () => {
             <h2 className="text-2xl font-bold">Your Friends</h2>
 
             {
-                loading ? <div className="p-20 text-center text-[#244D3F]">
+                loading ? <div className="p-25 text-center text-[#244D3F]">
                     <span> <HashLoader color="#244D3F" /></span>
                 </div> :
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10 mb-10">
                         {
                             friends.map((friend, ind) => {
                                 return <div key={ind} >
-
                                     <FriendCards friend={friend}></FriendCards>
-
-                                </div>
+                            </div>
                             })
                         }
                     </div>

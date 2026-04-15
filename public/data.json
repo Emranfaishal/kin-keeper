@@ -10,11 +10,10 @@
             "college",
             "close friend"
         ],
-        "bio": "Met during computer science studies at university. Used to work on coding projects and attend hackathons together.",
+        "bio": "Met during computer science studies at university.",
         "goal": 14,
         "next_due_date": "2026-03-28",
-        "gender":"FAMALE MALE"
-        
+        "gender": "male"
     },
     {
         "id": 2,
@@ -27,10 +26,10 @@
             "office",
             "team mate"
         ],
-        "bio": "Worked together at first job. Often shared lunch breaks and career advice discussions.",
+        "bio": "Worked together at first job.",
         "goal": 14,
         "next_due_date": "2026-04-17",
-        "gender":"MALE"
+        "gender": "female"
     },
     {
         "id": 3,
@@ -43,10 +42,10 @@
             "school",
             "football"
         ],
-        "bio": "Childhood friend from school. Played football together every weekend in the neighborhood math.",
+        "bio": "Childhood friend from school.",
         "goal": 14,
         "next_due_date": "2026-04-22",
-        "gender":"FAMILY"
+        "gender": "male"
     },
     {
         "id": 4,
@@ -59,10 +58,10 @@
             "gym",
             "fitness"
         ],
-        "bio": "Gym partner who motivated me to stay consistent with workouts and healthy eating habits.",
+        "bio": "Gym partner and motivator.",
         "goal": 14,
         "next_due_date": "2026-03-25",
-        "gender":"FAMILY"
+        "gender": "male"
     },
     {
         "id": 5,
@@ -75,10 +74,10 @@
             "university",
             "study group"
         ],
-        "bio": "Studied together for exams and helped each other with difficult subjects like algorithms.",
+        "bio": "Study partner during exams.",
         "goal": 14,
         "next_due_date": "2026-04-15",
-        "gender":"MAIL"
+        "gender": "female"
     },
     {
         "id": 6,
@@ -91,10 +90,10 @@
             "neighbor",
             "childhood"
         ],
-        "bio": "Neighbor since childhood. Grew up playing cricket in the same street.",
+        "bio": "Childhood neighbor and cricket partner.",
         "goal": 14,
         "next_due_date": "2026-04-24",
-        "gender":"FAMILY"
+        "gender": "male"
     },
     {
         "id": 7,
@@ -107,10 +106,10 @@
             "online friend",
             "design"
         ],
-        "bio": "Met through an online design community. Shared ideas and collaborated on UI/UX projects.",
+        "bio": "Met via design community.",
         "goal": 14,
         "next_due_date": "2026-04-01",
-        "gender":"MAIL"
+        "gender": "female"
     },
     {
         "id": 8,
@@ -123,10 +122,10 @@
             "travel",
             "adventure"
         ],
-        "bio": "Travel buddy who joined me on trips to Cox’s Bazar and Bandarban. Loves exploring nature.",
+        "bio": "Travel partner for trips.",
         "goal": 14,
         "next_due_date": "2026-04-16",
-        "gender":"FAMILY"
+        "gender": "male"
     },
     {
         "id": 9,
@@ -138,10 +137,10 @@
         "tags": [
             "family friend"
         ],
-        "bio": "Family friend who regularly visits during Eid and special occasions.",
+        "bio": "Close family friend.",
         "goal": 14,
         "next_due_date": "2026-04-20",
-        "gender":"MAIL"
+        "gender": "female"
     },
     {
         "id": 10,
@@ -154,9 +153,159 @@
             "business",
             "mentor"
         ],
-        "bio": "Mentor who guided me in starting freelance work and building professional skills.",
+        "bio": "Business mentor.",
         "goal": 14,
         "next_due_date": "2026-03-27",
-        "gender":"FAMILY"
+        "gender": "male"
+    },
+    {
+        "id": 11,
+        "name": "Mehedi Hasan",
+        "picture": "https://randomuser.me/api/portraits/men/23.jpg",
+        "email": "mehedi.hasan@gmail.com",
+        "days_since_contact": 6,
+        "status": "on-track",
+        "tags": [
+            "college"
+        ],
+        "bio": "Friend from college.",
+        "goal": 14,
+        "next_due_date": "2026-04-21",
+        "gender": "male"
+    },
+    {
+        "id": 12,
+        "name": "Jannatul Ferdous",
+        "picture": "https://randomuser.me/api/portraits/women/33.jpg",
+        "email": "jannatul.ferdous@gmail.com",
+        "days_since_contact": 15,
+        "status": "overdue",
+        "tags": [
+            "office"
+        ],
+        "bio": "Office colleague.",
+        "goal": 14,
+        "next_due_date": "2026-04-02",
+        "gender": "female"
+    },
+    {
+        "id": 13,
+        "name": "Sabbir Ahmed",
+        "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+        "email": "sabbir.ahmed@gmail.com",
+        "days_since_contact": 3,
+        "status": "on-track",
+        "tags": [
+            "gaming"
+        ],
+        "bio": "Online gaming friend.",
+        "goal": 14,
+        "next_due_date": "2026-04-23",
+        "gender": "male"
+    },
+    {
+        "id": 14,
+        "name": "Tania Akter",
+        "picture": "https://randomuser.me/api/portraits/women/10.jpg",
+        "email": "tania.akter@gmail.com",
+        "days_since_contact": 12,
+        "status": "almost due",
+        "tags": [
+            "university"
+        ],
+        "bio": "University classmate.",
+        "goal": 14,
+        "next_due_date": "2026-04-18",
+        "gender": "female"
+    },
+    {
+        "id": 15,
+        "name": "Hasan Mahmud",
+        "picture": "https://randomuser.me/api/portraits/men/40.jpg",
+        "email": "hasan.mahmud@gmail.com",
+        "days_since_contact": 19,
+        "status": "overdue",
+        "tags": [
+            "business"
+        ],
+        "bio": "Business partner.",
+        "goal": 14,
+        "next_due_date": "2026-03-29",
+        "gender": "male"
+    },
+    {
+        "id": 16,
+        "name": "Rokeya Begum",
+        "picture": "https://randomuser.me/api/portraits/women/60.jpg",
+        "email": "rokeya.begum@gmail.com",
+        "days_since_contact": 8,
+        "status": "on-track",
+        "tags": [
+            "family"
+        ],
+        "bio": "Relative and family member.",
+        "goal": 14,
+        "next_due_date": "2026-04-19",
+        "gender": "female"
+    },
+    {
+        "id": 17,
+        "name": "Shakib Al Hasan",
+        "picture": "https://randomuser.me/api/portraits/men/70.jpg",
+        "email": "shakib.hasan@gmail.com",
+        "days_since_contact": 14,
+        "status": "almost due",
+        "tags": [
+            "sports"
+        ],
+        "bio": "Cricket buddy.",
+        "goal": 14,
+        "next_due_date": "2026-04-15",
+        "gender": "male"
+    },
+    {
+        "id": 18,
+        "name": "Mim Akter",
+        "picture": "https://randomuser.me/api/portraits/women/19.jpg",
+        "email": "mim.akter@gmail.com",
+        "days_since_contact": 4,
+        "status": "on-track",
+        "tags": [
+            "design"
+        ],
+        "bio": "Creative designer friend.",
+        "goal": 14,
+        "next_due_date": "2026-04-22",
+        "gender": "female"
+    },
+    {
+        "id": 19,
+        "name": "Arman Hossain",
+        "picture": "https://randomuser.me/api/portraits/men/88.jpg",
+        "email": "arman.hossain@gmail.com",
+        "days_since_contact": 17,
+        "status": "overdue",
+        "tags": [
+            "school"
+        ],
+        "bio": "School friend.",
+        "goal": 14,
+        "next_due_date": "2026-04-03",
+        "gender": "male"
+    },
+    {
+        "id": 20,
+        "name": "Sumaiya Islam",
+        "picture": "https://randomuser.me/api/portraits/women/72.jpg",
+        "email": "sumaiya.islam@gmail.com",
+        "days_since_contact": 9,
+        "status": "on-track",
+        "tags": [
+            "friend"
+        ],
+        "bio": "Close friend.",
+        "goal": 14,
+        "next_due_date": "2026-04-21",
+        "gender": "female"
     }
 ]

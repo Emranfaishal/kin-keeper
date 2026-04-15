@@ -12,8 +12,8 @@ const Stats = () => {
     ];
     const totalData = data.reduce((sum, item) => sum + item.value, 0);
     return (
-        <div className='py-10'>
-            <div className='py-8 flex flex-col items-center justify-center min-h-100'>
+        <div className='p-20'>
+            <div className='flex flex-col items-center justify-center py-20 bg-gray-50 rounded-3xl border-2  border-gray-200'>
                 {totalData === 0 ? (
                     <div className="text-center space-y-1">
                         {/* <div className="flex justify-center items-center">

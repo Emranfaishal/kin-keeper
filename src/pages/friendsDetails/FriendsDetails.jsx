@@ -1,11 +1,12 @@
 // import React, { useState } from 'react';
-import { useLoaderData, useParams } from 'react-router';
+import { Link, useLoaderData, useParams } from 'react-router';
 import { BiSolidTrash } from 'react-icons/bi';
 import { FiEdit, FiPhoneCall } from 'react-icons/fi';
 import { IoIosVideocam, IoMdArchive, IoMdClock, IoMdText } from 'react-icons/io';
 import { MdHistory } from 'react-icons/md';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { FriendsContext } from '../../context/FriendsContext';
+import TimelineCard from '../timeline/TimelineCard';
 
 const FriendsDetails = () => {
     const params = useParams();
@@ -13,14 +14,12 @@ const FriendsDetails = () => {
     const friend = useLoaderData();
     // console.log(friend);
     const expectFriend = friend.find((fri => String(fri.id) === params.id));
-    // console.log(expectFriend);
-    // const [callDetails, setCallDetails] = useState([]);
-    // const handleCall = (expectFriends) => {
-    //     setCallDetails([...callDetails, expectFriends]);
-    // }
-
+    //    console.log(expectFriend);
     const { handleCall, handleText, handleVideo } = useContext(FriendsContext);
 
+    const { callDetails, textDetails, videoDetails } = useContext(FriendsContext);
+
+    const [filter, setFilter] = useState('all');
     return (
         <div>
             <div className='bg-base-300'>
@@ -81,9 +80,9 @@ const FriendsDetails = () => {
                                         <h3 className="text-[#244D3F] font-bold py-2">Relationship Goal</h3>
                                         <p className="text-sm text-gray-600">Connect every  : <span className='font-bold text-gray-900'>{expectFriend.goal}</span></p>
                                     </div>
-                                    <div className='flex justify-center items-center'>
+                                    <Link to={'/'} className='flex justify-center items-center'>
                                         <button className="btn btn-sm btn-ghost border-gray-100  gap-1"> <FiEdit /> Edit</button>
-                                    </div>
+                                    </Link>
                                 </div>
                                 <div className="card p-6 border border-gray-100 bg-white rounded-2xl shadow-sm">
                                     <h3 className="text-[#244D3F] font-bold mb-3">Quick Check-In</h3>
@@ -118,14 +117,38 @@ const FriendsDetails = () => {
                             <div className="card p-6 border border-gray-100 bg-white rounded-2xl space-y-4 shadow-sm">
                                 <div className='flex justify-between items-center p-2'>
                                     <h3 className="text-[#244D3F] font-bold">Recent Interactions</h3>
-                                    <p className='text-[12px] btn font-medium '><MdHistory /> Full History</p>
+                                    <Link to={'/timeline'}>
+                                        <p className='text-[12px] btn font-medium '><MdHistory /> Full History</p></Link>
+
                                 </div>
                                 <div className="space-y-3">
+                                    <div className='container mx-auto px-4 h-full'>
+                                        <div>
+                                            <div className="dropdown dropdown-bottom">
+                                                <ul tabIndex="-1" className="dropdown-content menu bg-base-100  rounded-box z-1 w-52 p-2 shadow-sm">
+                                                    <li onClick={() => setFilter('all')}><a>All</a></li>
+                                                    <li onClick={() => setFilter('call')}><a>Call</a></li>
+                                                    <li onClick={() => setFilter('text')}><a>Text</a></li>
+                                                    <li onClick={() => setFilter('video')}><a>Video</a></li>
 
-                                    <div className="flex justify-between items-center text-sm p-3 bg-gray-50 rounded-xl">
-                                        <div className='flex gap-2'> Text</div>
-                                        <p>Asked for career advice</p>
-                                        <p className='text-gray-400'>Jan 28, 2026</p>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+                                        <div className='space-y-4'>
+                                            {(filter === 'all' || filter === 'call') &&
+                                                callDetails.map(frd => <TimelineCard frd={frd} type="call" key={frd.id}></TimelineCard>)
+                                            }
+
+                                            {(filter === 'all' || filter === 'text') &&
+                                                textDetails.map(frd => <TimelineCard frd={frd} type="text" key={frd.id}></TimelineCard>)
+                                            }
+
+                                            {(filter === 'all' || filter === 'video') &&
+                                                videoDetails.map(frd => <TimelineCard frd={frd} type="video" key={frd.id}></TimelineCard>)
+                                            }
+                                        </div>
                                     </div>
                                 </div>
                             </div>
