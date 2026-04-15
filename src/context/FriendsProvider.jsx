@@ -7,10 +7,16 @@ const FriendsProvider = ({ children }) => {
     const [callDetails, setCallDetails] = useState([]);
     const [textDetails, setTextDetails] = useState([]);
     const [videoDetails, setVideoDetails] = useState([]);
+    const [isCalling, setIsCalling] = useState(false);
 
     const handleCall = (expectedFriends) => {
-        setCallDetails([...callDetails, expectedFriends]);
-        toast.success("Audio Calling..");
+        if (!isCalling) {
+            setCallDetails([...callDetails, expectedFriends]);
+            toast.success("Audio Calling..");
+        } else {
+            toast.error("Audio end...");
+        }
+        setIsCalling(!isCalling);
     }
 
     const handleText = (expectedFriends) => {

@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
         element: <MainLayout></MainLayout>,
         children: [
             {
-                path:'/',
+                path:"/",
                 element: <HomePage></HomePage>,
                 loader: () => fetch('/data.json')
             },

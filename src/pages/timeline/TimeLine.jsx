@@ -28,11 +28,11 @@ const TimeLine = () => {
                         <div tabIndex={0} role="button" className="btn text-gray-500 m-1">Timeline by {filter === "all" ? "⬇️" : filter === "call" ? "call"
                             : filter === "text" ? "text" : "video"} </div>
 
-                        <ul tabIndex="-1" className="dropdown-content menu bg-base-100  rounded-box z-1 w-52 p-2 shadow-sm">
-                            <li onClick={() => setFilter('all')}><a>All</a></li>
-                            <li onClick={() => setFilter('call')}><a>Call</a></li>
-                            <li onClick={() => setFilter('text')}><a>Text</a></li>
-                            <li onClick={() => setFilter('video')}><a>Video</a></li>
+                        <ul tabIndex="-1" className="dropdown-content menu bg-base-100  rounded-box p-2 shadow-sm">
+                            <li onClick={() => setFilter('all')}><a>All List</a></li>
+                            <li onClick={() => setFilter('call')}><a>Call List</a></li>
+                            <li onClick={() => setFilter('text')}><a>Messages List</a></li>
+                            <li onClick={() => setFilter('video')}><a>Video List</a></li>
 
                         </ul>
                     </div>
@@ -52,15 +52,18 @@ const TimeLine = () => {
             </div>}
 
             <div className='space-y-4'>
-                {(filter === 'all' || filter === 'call') &&
+                {
+                    (filter === 'all' || filter === 'call') &&
                     callDetails.map(frd => <TimelineCard frd={frd} type="call" key={frd.id}></TimelineCard>)
                 }
 
-                {(filter === 'all' || filter === 'text') &&
+                {
+                    (filter === 'all' || filter === 'text') &&
                     textDetails.map(frd => <TimelineCard frd={frd} type="text" key={frd.id}></TimelineCard>)
                 }
 
-                {(filter === 'all' || filter === 'video') &&
+                {
+                    (filter === 'all' || filter === 'video') &&
                     videoDetails.map(frd => <TimelineCard frd={frd} type="video" key={frd.id}></TimelineCard>)
                 }
             </div>

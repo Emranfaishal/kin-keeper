@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { FriendsContext } from '../../context/FriendsContext';
+import { GiEmptyWoodBucket } from "react-icons/gi";
 import { Pie, PieChart, ResponsiveContainer, Tooltip, Legend } from 'recharts';
 
 const Stats = () => {
@@ -12,13 +13,14 @@ const Stats = () => {
     ];
     const totalData = data.reduce((sum, item) => sum + item.value, 0);
     return (
-        <div className='p-20'>
+        <div className='p-10'>
+            <h1 className='text-5xl font-bold mt-10 mb-10'>Friendship Analytics</h1>
             <div className='flex flex-col items-center justify-center py-20 bg-gray-50 rounded-3xl border-2  border-gray-200'>
                 {totalData === 0 ? (
                     <div className="text-center space-y-1">
-                        {/* <div className="flex justify-center items-center">
-                            <img src="" className='h-50 w-50' alt="" />
-                        </div> */}
+                        <div className="flex justify-center items-center">
+                            <span className='text-7xl text-gray-400'><GiEmptyWoodBucket></GiEmptyWoodBucket></span>
+                        </div>
                         <h2 className="text-xl font-semibold text-gray-400">No Conversation Found </h2>
                         <p className="text-gray-400">Start a quick check-in to see your stats!</p>
                     </div>)
